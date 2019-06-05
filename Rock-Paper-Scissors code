@@ -1,3 +1,4 @@
+// setting the user choice and handling invalid entries :
 const getUserChoice = userInput => {
   userInput = userInput.toLowerCase()
   if (userInput === 'rock') {
@@ -11,17 +12,16 @@ const getUserChoice = userInput => {
   }
 }
 
+// generate a random choice for the computer
 const getComputerChoice = compInput => {
   const choice = Math.floor(Math.random()*3)
   if (choice === 0) {
     return 'rock'
   } else if(choice === 1) {
     return 'paper'
-  } else if (choice === 2) {
-    return 'scissors'
   } else {
-    return getComputerChoice()
-  }
+    return 'scissors'
+  } 
 }
 
 const determineWinner = (userChoice, computerChoice) => {
